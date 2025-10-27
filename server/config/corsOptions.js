@@ -6,11 +6,11 @@ const corsOptions = {
             callback(null, true);
         }else{
             // throw an error if an attemp is made to access the server by unregistered domain name
-            callback(new Error("Not allowed ny CORS"));
+            callback(new Error("Not allowed by CORS"));
         }
     },
     // accept any credentials come with headers or cookies
-    Credential: true,
+    credentials: true,
     optionsSuccessStatus: 200
 }
 

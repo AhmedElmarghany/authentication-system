@@ -12,6 +12,7 @@ const PORT = process.env.PORT || 5000;
 connectDB();
 
 app.use(cors(corsOptions));
+
 app.use(cookieParser());
 // to accept json
 app.use(express.json());
