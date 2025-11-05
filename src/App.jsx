@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import "./App.css";
 import RootLayout from "./components/RootLayout";
-import Login from "./pages/auth/login";
+import Login from "./pages/auth/Login";
 import Signup from "./pages/auth/Signup";
 import Dashboard from "./pages/Dashboard";
 import Cookies from "js-cookie";
