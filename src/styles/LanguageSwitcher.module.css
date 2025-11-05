@@ -1,0 +1,170 @@
+.languageSwitcher {
+  position: relative;
+  display: inline-block;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  min-width: 120px;
+  height: 44px;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.trigger:hover {
+  border-color: var(--text-secondary);
+}
+
+.trigger:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(106, 81, 248, 0.1);
+}
+
+.globeIcon {
+  color: var(--text-secondary);
+  flex-shrink: 0;
+  transition: color 0.3s;
+}
+
+.trigger:hover .globeIcon {
+  color: var(--primary-color);
+}
+
+.currentLang {
+  flex: 1;
+  text-align: left;
+}
+
+.chevronIcon {
+  color: var(--text-secondary);
+  flex-shrink: 0;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.chevronIcon.open {
+  transform: rotate(180deg);
+}
+
+.trigger:hover .chevronIcon {
+  color: var(--primary-color);
+}
+
+/* Dropdown Menu */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  right: 0;
+  width: -webkit-fill-available;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 1000;
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.option {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+}
+
+.option:hover {
+  background: var(--bg-secondary);
+}
+.option:first-child .langName{
+      font-family: "IBM Plex Mono", monospace;
+}
+.option:last-child .langName{
+    font-family: "IBM Plex Sans Arabic", sans-serif;
+}
+.option.active {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.langName {
+  flex: 1;
+}
+
+.checkIcon {
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+/* RTL Support */
+[dir="rtl"] .trigger {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .currentLang {
+  text-align: right;
+}
+
+[dir="rtl"] .option {
+  text-align: right;
+}
+
+[dir="rtl"] .dropdown {
+  left: auto;
+  right: 0;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .trigger {
+    min-width: 100px;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .globeIcon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .chevronIcon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .currentLang {
+    font-size: 0.8rem;
+  }
+
+  .option {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}

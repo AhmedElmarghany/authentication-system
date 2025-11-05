@@ -1,35 +1,23 @@
-// import styles from "../styles/Modal.module.css";
+import styles from "../styles/Modal.module.css";
 
-// const Modal = ({ open, onclose, children }) => {
-
-const MODAL_STYLES = {
-  position: "fixed",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  backgroundColor: "#FFF",
-  padding: "50px",
-  zIndex: 1000
-};
-
-const OVERLAY_STYLES = {
-  position: "fixed",
-  top: 0,
-  right: 0,
-  bottom: 0,
-  left: 0,
-  backgroundColor: "rgba(0, 0, 0, .7)",
-  zIndex: 1000
-}
 
 const Modal = ({ open, onClose, children }) => {
   if(!open) return null;
   return (
-    // <div className={styles}>
     <>
-      <div style={OVERLAY_STYLES} onClick={onClose}/>
-      <div style={MODAL_STYLES}>
-        {/* <button onClick={onClose}>Close Modal</button> */}
+      {/* Overlay - clicking it closes the modal */}
+      <div className={styles.overlay} onClick={onClose}/>
+      {/* Modal content - prevents closing when clicking inside */}
+      <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
+         <button 
+          className={styles.closeButton} 
+          onClick={onClose}
+          aria-label="Close modal"
+        >
+          <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
         {children}
       </div>
     </>

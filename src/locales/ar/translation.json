@@ -1,0 +1,119 @@
+{
+  "name": "أوث كور",
+  "nav": {
+    "home": "الرئيسية",
+    "dashboard": "لوحة التحكم",
+    "logout": "تسجيل الخروج"
+  },
+  "home": {
+    "badge": "تطبيق ويب متكامل",
+    "title": "نظام المصادقة",
+    "features": {
+      "multilingual": "متعدد اللغات",
+      "darkLight": "الوضع الداكن/الفاتح",
+      "responsive": "متجاوب",
+      "protectedRoutes": "مسارات محمية"
+    },
+    "architecture": {
+      "modular": "بنية معمارية نموذجية",
+      "reusable": "مكونات واجهة قابلة لإعادة الاستخدام",
+      "protectedPages": "مسارات/صفحات محمية",
+      "notFound": "صفحة 404 غير موجودة"
+    },
+    "cta": {
+      "dashboard": "لوحة التحكم",
+      "getStarted": "ابدأ الآن"
+    },
+    "frontend": {
+      "title": "الواجهة الأمامية",
+      "description": "تم التطوير باستخدام <code>React.js</code> لواجهة مستخدم تفاعلية و<code>Vite</code> للبناء السريع، <code>React Router DOM</code> للتنقل السلس، <code>Redux Toolkit</code> (<code>RTK Query</code>) لإدارة استدعاءات الـ API، استخدام <code>CSS</code> النقي للتنسيق و<code>CSS Modules</code> لتجنب التعارضات، <code>i18next</code> للترجمة الدولية للتعامل مع تبديل اللغة"
+    },
+    "backend": {
+      "title": "الواجهة الخلفية",
+      "description": "تم التطوير باستخدام <code>Node.js</code> وإطار عمل <code>Express.js</code>، <code>MongoDB</code> كقاعدة بيانات و<code>Mongoose</code> لنمذجة البيانات، <code>JSON Web Token (JWT)</code> للمصادقة الآمنة، <code>Bcrypt</code> لتشفير كلمات المرور"
+    }
+  },
+  "auth": {
+    "layout": {
+      "slogan1": "المصادقة الذكية",
+      "slogan2": "للتطبيقات الحديثة",
+      "subSlogan": "أساس الوصول الآمن",
+      "footer": "© ٢٠٢٥ أحمد المرغني . جميع الحقوق محفوظة"
+    },
+    "login": {
+      "pageTitle": "تسجيل الدخول",
+      "title": "مرحباً بعودتك",
+      "email": "البريد الإلكتروني",
+      "password": "كلمة المرور",
+      "submit": "تسجيل الدخول",
+      "noAccount": "ليس لديك حساب؟",
+      "signup": "إنشاء حساب"
+    },
+    "signup": {
+      "pageTitle": "إنشاء حساب",
+      "title": "إنشاء حسابك",
+      "firstName": "الاسم الأول",
+      "lastName": "اسم العائلة",
+      "email": "البريد الإلكتروني",
+      "password": "كلمة المرور",
+      "submit": "إنشاء حساب",
+      "haveAccount": "هل لديك حساب بالفعل؟",
+      "login": "تسجيل الدخول"
+    },
+    "placeholder": {
+      "firstName": "أحمد",
+      "lastName": "السيد"
+    },
+    "passwordRequirements": {
+      "title": "يجب أن تحتوي كلمة المرور على:",
+      "length": "6 أحرف على الأقل",
+      "capital": "حرف كبير واحد على الأقل"
+    }
+  },
+  "dashboard": {
+    "pageTitle": "لوحة التحكم",
+    "title": "لوحة التحكم",
+    "subtitle": "قائمة بجميع المستخدمين المسجلين في النظام",
+    "deleteAccount": "حذف الحساب",
+    "logout": "تسجيل الخروج",
+    "usersTable": {
+      "title": "المستخدمون الجدد",
+      "subtitle": "قائمة بجميع المستخدمين المسجلين في النظام",
+      "name": "الاسم",
+      "email": "البريد الإلكتروني",
+      "joinDate": "تاريخ الانضمام"
+    }
+  },
+  "modal": {
+    "logout": {
+      "title": "تسجيل الخروج",
+      "description": "هل أنت متأكد أنك تريد تسجيل الخروج؟",
+      "confirm": "تسجيل الخروج",
+      "cancel": "إلغاء"
+    },
+    "deleteAccount": {
+      "title": "حذف الحساب",
+      "description": "هل أنت متأكد أنك تريد حذف حسابك؟ هذا الإجراء لا يمكن التراجع عنه.",
+      "confirm": "حذف الحساب",
+      "cancel": "إلغاء"
+    }
+  },
+  "notFound": {
+    "title": "الصفحة غير موجودة",
+    "description": "عذراً! الصفحة التي تبحث عنها غير موجودة. ربما تم نقلها أو حذفها.",
+    "goHome": "الصفحة الرئيسية",
+    "goBack": "رجوع",
+    "helpfulLinks": "روابط مفيدة:"
+  },
+  "common": {
+    "loading": "جاري التحميل...",
+    "error": "حدث خطأ",
+    "wait": "انتظر...",
+    "success": "نجح",
+    "cancel": "إلغاء",
+    "confirm": "تأكيد",
+    "save": "حفظ",
+    "close": "إغلاق",
+    "footer": "© ٢٠٢٥ أحمد المرغني . جميع الحقوق محفوظة"
+  }
+}

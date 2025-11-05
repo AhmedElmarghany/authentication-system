@@ -1,0 +1,118 @@
+.tableHeader {
+    margin-bottom: 1.5rem;
+}
+
+.tableHeader h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.tableHeader p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.tableContainer {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.tableWrapper {
+    overflow-x: auto;
+    overflow-y: auto;
+    flex: 1;
+    max-height: calc(100vh - 45vh);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    position: sticky;
+    top: 0;
+    background: var(--primary-color);
+    z-index: 10;
+}
+
+th {
+    padding: 1rem 1.5rem;
+    text-align: left;
+    color: var(--bg-primary);
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-transform: none;
+}
+
+
+tbody tr:nth-child(odd) {
+    background: var(--table-odd);
+}
+
+tbody tr:nth-child(even) {
+    background: var(--table-even);
+}
+
+td {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.95rem;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* rtl support */
+[dir= "rtl"] th{
+    text-align: right;
+}
+
+@media (max-width: 968px) {
+    .tableWrapper {
+        max-height: none;
+    }
+
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 0 1rem;
+    }
+    .tableHeader h2 {
+        font-size: 1.25rem;
+    }
+
+    th, td {
+        padding: 0.75rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    th {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        flex: 1;
+        justify-content: center;
+        padding: 0.65rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    th, td {
+        padding: 0.65rem 0.75rem;
+        font-size: 0.8rem;
+    }
+}

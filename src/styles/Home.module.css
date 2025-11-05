@@ -1,0 +1,289 @@
+.container {
+  min-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-primary);
+}
+
+/* Main Content */
+.main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 0rem 3rem;
+  overflow: hidden;
+}
+
+.content {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* Left Section */
+.leftSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.badge {
+  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--accent-light);
+  color: var(--primary-color);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* Features Grid (2x2 with icons) */
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.feature svg {
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+/* Divider */
+.divider {
+  border: none;
+  height: 1px;
+  background: var(--border-color);
+  margin: 0.5rem 0;
+}
+
+/* Architecture Grid (2x2 with bullets) */
+.architectureGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.architectureItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.bullet {
+  width: 6px;
+  height: 6px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* CTA Button */
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--primary-color);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+  width: fit-content;
+  margin-top: 1rem;
+}
+
+.ctaButton:hover {
+  box-shadow: 0px 0px 0px 3px rgba(106, 81, 248, 0.4);
+}
+
+/* Right Section - Code Windows */
+.rightSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.codeWindow {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.codeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: var(--bg-tertiary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.codeTitle {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.windowControls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.codeBody {
+  padding: 1.5rem;
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+/* Footer */
+.footer {
+  padding: 1rem 3rem;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  background: var(--bg-primary);
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* RTL Support */
+[dir="rtl"] .leftSection {
+  align-items: flex-start;
+}
+
+[dir="rtl"] .ctaButton svg{
+  transform: scaleX(-1)
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .main {
+    padding: 2rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .leftSection {
+    align-items: center;
+    text-align: center;
+  }
+
+  [dir="rtl"] .leftSection {
+    align-items: center;
+    text-align: center;
+  }
+
+  .badge {
+    margin: 0 auto;
+  }
+
+  .featuresGrid,
+  .architectureGrid {
+    max-width: 500px;
+  }
+
+  .ctaButton {
+    margin: 1rem auto 0;
+  }
+  .codeBody{
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding-top: 4rem;
+  }
+
+  .main {
+    padding: 1.5rem 1rem;
+  }
+
+  .footer {
+    padding: 1.5rem 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .content {
+    gap: 2rem;
+  }
+
+  .featuresGrid,
+  .architectureGrid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .feature,
+  .architectureItem {
+    font-size: 0.875rem;
+  }
+
+  .codeBody {
+    padding: 1.25rem;
+  }
+
+  .codeBody p {
+    font-size: 0.875rem;
+  }
+
+  .ctaButton {
+    width: 100%;
+    padding: 0.875rem 1.75rem;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,102 @@
+/* Modal header with icon */
+.modalHeader {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.modalIcon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Logout icon styling */
+.modalIcon.logout {
+  background: var(--danger-bg-color);
+  color: var(--danger-color);
+}
+
+/* Delete icon styling */
+.modalIcon.delete {
+  background: var(--danger-bg-color);
+  color: var(--danger-color);
+}
+
+.modalTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.modalDescription {
+  font-size: 1rem;
+  color: var(--texxt-secondary);
+  line-height: 1.6;
+  letter-spacing: -1px;
+}
+
+/* Modal actions (buttons container) */
+.modalActions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.modalBtn {
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Cancel button */
+.modalBtn.cancel {
+  background: var(--button-color);
+  color: var(--label-text-color);
+}
+
+.modalBtn.cancel:hover {
+  background: var(--button-hover-color);
+}
+
+/* Danger button (logout, delete) */
+.modalBtn.danger {
+  background: var(--danger-color);
+  color: var(--danger-bg-color);
+}
+
+.modalBtn.danger:hover {
+  background: var(--danger-hover);
+}
+
+@media (max-width: 640px) {
+  .modalActions {
+    flex-direction: column-reverse;
+  }
+
+  .modalBtn {
+    width: 100%;
+  }
+
+  .modalTitle {
+    font-size: 1.25rem;
+  }
+
+  .modalIcon {
+    width: 56px;
+    height: 56px;
+  }
+}

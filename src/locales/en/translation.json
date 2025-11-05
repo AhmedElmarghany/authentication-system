@@ -1,0 +1,119 @@
+{
+  "name": "AuthCore",
+  "nav": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "logout": "Logout"
+  },
+  "home": {
+    "badge": "Full-stack",
+    "title": "Authentication System",
+    "features": {
+      "multilingual": "Multilingual",
+      "darkLight": "Dark/Light mode",
+      "responsive": "Responsive",
+      "protectedRoutes": "Protected routes"
+    },
+    "architecture": {
+      "modular": "Modular architecture",
+      "reusable": "Reusable UI components",
+      "protectedPages": "Protected route/pages",
+      "notFound": "404 Not Found page"
+    },
+    "cta": {
+      "dashboard": "Dashboard",
+      "getStarted": "Get Started"
+    },
+    "frontend": {
+      "title": "Frontend",
+      "description": "Developed with <code>React.js</code> for interactive UI and <code>vite</code> for fast building, <code>React-Router-Dom</code> for seamless navigation, Redux toolkit <code>RTK Query</code> for managing API calls, Used pure <code>CSS</code> for styling and CSS modules to avoid conflicts, <code>i18next</code> for internationalization to handle language switching"
+    },
+    "backend": {
+      "title": "Backend",
+      "description": "Developed with <code>Node.js</code> and <code>Express.js</code> framework, <code>MongoDB</code> as a database and <code>Mongoose</code> for data modeling, JSON Web Token <code>JWT</code> for secure authentication, <code>Bcrypt</code> for password hashing"
+    }
+  },
+  "auth": {
+    "layout": {
+      "slogan1": "Smart authentication",
+      "slogan2": "for modern apps",
+      "subSlogan": "The foundation of secure access",
+      "footer": "© 2025 Ahmed Elmarghany. All Rights Reserved"
+    },
+    "login": {
+      "pageTitle": "Login",
+      "title": "Welcome back",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Log In",
+      "noAccount": "Don't have an account?",
+      "signup": "Sign Up"
+    },
+    "signup": {
+      "pageTitle": "Sign up",
+      "title": "Create your account",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Create Account",
+      "haveAccount": "Already have an account? ",
+      "login": "Log In"
+    },
+    "placeholder": {
+      "firstName": "John",
+      "lastName": "Doe"
+    },
+    "passwordRequirements": {
+      "title": "Password must contain:",
+      "length": "At least 6 characters",
+      "capital": "At least one capital letter"
+    }
+  },
+  "dashboard": {
+    "pageTitle": "Dashboard",
+    "title": "Dashboard",
+    "subtitle": "A list of all users registered in the system",
+    "deleteAccount": "Delete Account",
+    "logout": "Logout",
+    "usersTable": {
+      "title": "Recent Users",
+      "subtitle": "A list of all users registered in the system",
+      "name": "Name",
+      "email": "Email",
+      "joinDate": "Join Date"
+    }
+  },
+  "modal": {
+    "logout": {
+      "title": "Logout",
+      "description": "Are you sure you want to logout?",
+      "confirm": "Logout",
+      "cancel": "Cancel"
+    },
+    "deleteAccount": {
+      "title": "Delete Account",
+      "description": "Are you sure you want to delete your account? This action cannot be undone.",
+      "confirm": "Delete Account",
+      "cancel": "Cancel"
+    }
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "Oops! The page you're looking for doesn't exist. It might have been moved or deleted.",
+    "goHome": "Go Home",
+    "goBack": "Go Back",
+    "helpfulLinks": "Helpful Links:"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "wait": "wait...",
+    "success": "Success",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "close": "Close",
+    "footer": "© 2025 Ahmed Elmarghany. All Rights Reserved"
+  }
+}

@@ -1,26 +1,30 @@
-const PasswordCriteria = ({ password }) => {
-    const creteria = [
-        {label: "Contains uppercase letter", met: /[A-Z]/.test(password) },
-        {label: "At least 6 characters", met: password.length >= 6 },
-    ]
+import { useTranslation } from "react-i18next";
+import styles from "../styles/PasswordStrengthMeter.module.css";
 
-    return(
+const PasswordCriteria = ({ password }) => {
+    const { t } = useTranslation()
+    const criteria = [
+        {label: t('auth.passwordRequirements.length'), met: password.length >= 6 },
+        {label: t('auth.passwordRequirements.capital'), met: /[A-Z]/.test(password) },
+    ];
+
+    return (
         <div>
-            {creteria.map((item)=>(
-                <div>
-                    {item.met ? 
-                    <p>✅ {item.label}</p>
-                    : 
-                    <p>⛔ {item.label}</p>
-                    }
+            {criteria.map((item, index) => (
+                <div key={index} className={`${styles.requirement} ${item.met ? styles.met : ''}`}>
+                    {item.label}
                 </div>
             ))}
         </div>
-    )
+    );
 };
 
 export const PasswordStrengthMeter = ({ password }) => {
+    const { t } = useTranslation();
   return (
-    <div><PasswordCriteria password={password}/></div>
-  )
+    <div className={styles.passwordRequirements}>
+        <div className={styles.passwordRequirementsTitle}>{t('auth.passwordRequirements.title')}</div>
+        <PasswordCriteria password={password}/>
+    </div>
+  );
 }

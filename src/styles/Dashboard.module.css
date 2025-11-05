@@ -1,6 +1,151 @@
-.table {
-  text-align: center;
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 0;
 }
-.table th {
-  padding: 5px;
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.tableSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.tableLaoding{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.dashboardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.dashboardInfo h1 {
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  text-align: auto;
+}
+
+.dashboardInfo p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  letter-spacing: -.6px;
+  word-spacing: -2.5px;
+}
+[lang= "ar"] .dashboardInfo p {
+  word-spacing: 0px;
+  
+}
+
+.dashboardActions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btnLogout {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 2px solid var(--border-color);
+}
+
+.btnLogout:hover {
+  background: var(--button-hover-color);
+}
+
+.btnDelete {
+  background: transparent;
+  color: var(--danger-color);
+  border: 2px solid var(--danger-color);
+}
+
+.btnDelete:hover {
+  background: var(--danger-color);
+  color: white;
+  /* transform: translateY(-2px); */
+}
+
+
+@media (max-width: 968px) {
+  .dashboardHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .dashboardInfo {
+    width: 100%;
+    text-align: center;
+  }
+
+  .dashboardActions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .mainContent {
+    padding: 2rem 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .dashboardInfo h1 {
+    font-size: 2rem;
+  }
+
+  .dashboardInfo p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboardActions {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .btn {
+    flex: 1;
+    justify-content: center;
+    padding: 0.65rem 1rem;
+    font-size: 0.85rem;
+  }
 }
