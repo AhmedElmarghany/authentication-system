@@ -129,6 +129,7 @@ const SignupForm = () => {
                 type={showPassword ? "text" : "password"}
                 className={styles.formInput}
                 placeholder="••••••"
+                autoComplete="new-password"
                 required
                 value={userInput.password}
                 onChange={(e) =>

@@ -57,7 +57,7 @@ const NewLangSwitch = () => {
           />
         </svg>
 
-        <span className={styles.currentLang}>{currentLang?.native}</span>
+        <span className={styles.currentLang}>{currentLang?.native || "English"}</span>
 
         {/* Chevron Icon */}
         <svg

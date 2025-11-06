@@ -62,6 +62,7 @@ const LoginForm = () => {
               type={showPassword ? "text" : "password"}
               className={styles.formInput}
               placeholder="••••••"
+              autoComplete="new-password"
               minLength={6}
               required
               value={userInputs.password}
