@@ -10,7 +10,6 @@ import RootLayout from "./components/RootLayout";
 import Login from "./pages/auth/Login";
 import Signup from "./pages/auth/Signup";
 import Dashboard from "./pages/Dashboard";
-import Cookies from "js-cookie";
 import RequireAuth from "./pages/auth/RequireAuth";
 import AuthLayout from "./components/auth/AuthLayout";
 import Home from "./pages/Home";
@@ -18,7 +17,6 @@ import { useLanguage } from "./hooks/useLanguage";
 import PageNotFound from "./pages/PageNotFound";
 
 function App() {
-  const accessToken = Cookies.get("accessToken");
   useLanguage();
 
   const router = createBrowserRouter(
@@ -28,15 +26,11 @@ function App() {
         <Route path="auth" element={<AuthLayout />}>
           <Route
             path="login"
-            element={
-              accessToken ? <Navigate to="/dashboard" replace /> : <Login />
-            }
+            element={<Login />}
           />
           <Route
             path="signup"
-            element={
-              accessToken ? <Navigate to="/dashboard" replace /> : <Signup />
-            }
+            element={<Signup />}
           />
         </Route>
         <Route

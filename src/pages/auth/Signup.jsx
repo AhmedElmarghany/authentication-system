@@ -3,9 +3,18 @@ import SignupForm from "../../components/auth/SignupForm";
 import styles from "../../styles/Form.module.css";
 import { useEffect } from "react";
 import { useTranslation } from 'react-i18next';
+import Cookies from "js-cookie";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
   const { t } = useTranslation();
+  const accessToken = Cookies.get("accessToken");
+  const navigate = useNavigate();
+
+  
+  useEffect(()=>{
+    if(accessToken) navigate("/dashboard", { replace: true });
+  },[accessToken, navigate])
 
   // Change page title
   useEffect(() => {

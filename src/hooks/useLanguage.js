@@ -6,8 +6,9 @@ export const useLanguage = () => {
 
   useEffect(() => {
     // Set document direction and language
-    document.documentElement.dir = i18n.language === 'ar' ? 'rtl' : 'ltr';
-    document.documentElement.lang = i18n.language;
+    const lang = i18n.language?.split("-")[0];
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    document.documentElement.lang = lang;
   }, [i18n.language]);
 
   const changeLanguage = (lng) => {
